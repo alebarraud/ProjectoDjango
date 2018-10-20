@@ -1,0 +1,25 @@
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+		<title>
+			Libros
+		</title>
+
+	</head>
+
+	<body>
+
+		<h1> Todos los libros </h1>
+    <ul>
+					{% for libro in object_list %}
+						<li><b>Nombre </b> {{libro.nombre}}</li>
+						<li><b>Precio </b> {{libro.precio}}</li>
+            <li><b>Autor </b> {{libro.autor}}</li>
+            <li><b>Categoria </b> {{libro.categoria}}</li>
+						<li><b>Descripcion</b> {{libro.descripcion}}</li>
+						<HR width="50%" align="left">
+					{% endfor %}
+					<a href="http://127.0.0.1:8000/">Inicio</a>
+		</ul>
+
+	</body>

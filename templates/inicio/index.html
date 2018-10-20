@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>
+			 Biblioteca virtual
+		</title>
+
+	</head>
+
+	<body>
+
+		<center><h1> Bienvenidos a mi biblioteca virtual </h1></center>
+    <br>
+    <br>
+
+		<form class="navbar-search pull-right" method="POST" action = "/libross/buscar/">
+				{% csrf_token %}
+	  	<div>
+	    <center>	<input type="search" name="buscalo" id="miBusqueda" name="q">
+	    	<button>Buscar</button> </center>
+	      <a href="http://127.0.0.1:8000/libros/reportar/"> Todos los libros </a>
+	      <br>
+	      <br>
+	      
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="http://127.0.0.1:8000/admin/"> Administracion </a>
+
+			{% block content %}
+			{% endblock %}
+
+  	</div>
+	</form>
+	</body>
+
+
+</html>

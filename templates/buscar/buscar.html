@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if vacio  %}
+
+  <h3> Entrada vacia, vuelva a tipear </h3>
+
+{% endif %}
+
+
+
+{% if categoria and not vacio %}
+
+    {% for libro in lista %}
+    <li><b>Nombre </b> {{libro.nombre}}</li>
+    <li><b>Precio </b> {{libro.precio}}</li>
+    <li><b>Autor </b> {{libro.autor}}</li>
+    <li><b>Categoria </b> {{libro.categoria}}</li>
+    <li><b>Descripcion</b> {{libro.descripcion}}</li>
+    <HR width="50%" align="left">
+    {% endfor %}
+
+{% endif %}
+
+
+{% if aux %}
+
+  <h3> Error no se encuentra el libro </h3>
+
+{% endif %}
+
+
+    {%if libro %}
+
+      {% for libro in libros %}
+        <li><b>Nombre </b> {{libro.nombre}}</li>
+        <li><b>Precio </b> {{libro.precio}}</li>
+        <li><b>Autor </b> {{libro.autor}}</li>
+        <li><b>Categoria </b> {{libro.categoria}}</li>
+        <li><b>Descripcion</b> {{libro.descripcion}}</li>
+        <HR width="50%" align="left">
+      {% endfor %}
+
+
+    {% endif %}
+
+
+
+{% endblock %}
